@@ -5,7 +5,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph, START, END
 
-from auth import get_jwt
+from auth import Get_Jwt
 
 load_dotenv()
 
@@ -15,7 +15,7 @@ GPT_LUNA = os.getenv("GPT_LUNA")
 GPT_TERRA = os.getenv("GPT_TERRA")
 GPT_SOL = os.getenv("GPT_SOL")
 TOKEN = os.getenv("TOKEN")
-# TOKEN = get_jwt()
+# TOKEN = Get_Jwt()
 
 class AgentState(TypedDict):
     messages: List[Union[HumanMessage, AIMessage]]
